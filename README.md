@@ -79,7 +79,7 @@ Design and implement a web site where the students from the university can uploa
 
 ## Project Description
 
-###Features
+### Features
 
 1. Users can `log in` to the web site or create a new account (`register`). After logging in succesfully the current user's ID will be saved to the current `session`.
 	
@@ -159,4 +159,4 @@ First of all you will need `MySQL Workbench` and `NetBeansIDE` installed. You ca
 	
 5. You can `run` the project by right clicking on the project name on the left tab named `Projects` and then click `Run`.
 
-I would not recommend to change values directly from the database, but use the web pages instead.
+I do not recommend to change values directly from the database, but use the web pages instead.
