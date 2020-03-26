@@ -79,21 +79,17 @@ Design and implement a web site where the students from the university can uploa
 
 ## Project Description
 
-<<<<<<< HEAD
 ###Features
-=======
-### Features
->>>>>>> 0dd44aae8009bff1670d489fc4ef0f13c3367940
 
-	1. Users can `log in` to the web site or create a new account (`register`). After logging in succesfully the current user's ID will be saved to the current `session`.
+1. Users can `log in` to the web site or create a new account (`register`). After logging in succesfully the current user's ID will be saved to the current `session`.
 	
-	2. Users can `view` and `edit` their data (`First Name`, `Last Name`, `Institution`, `Faculty`, `Department`, `CV description`, `Birth Date`, `Interests`, `Languages` and `Hobbies`). There is also some data displayed, such as Quotes, Photos and Videos, but is not functional since i did not have enough time to write the necessary code. Each field is updated separately. First Name, Last Name, Institution, Faculty, Department, CV description and Languages are updated with `text` as input. Interests, Hobbies and Language Level have a `drop down list` with some options as input.
+2. Users can `view` and `edit` their data (`First Name`, `Last Name`, `Institution`, `Faculty`, `Department`, `CV description`, `Birth Date`, `Interests`, `Languages` and `Hobbies`). There is also some data displayed, such as Quotes, Photos and Videos, but is not functional since i did not have enough time to write the necessary code. Each field is updated separately. First Name, Last Name, Institution, Faculty, Department, CV description and Languages are updated with `text` as input. Interests, Hobbies and Language Level have a `drop down list` with some options as input.
 	
-	3. After updating their data, users can `log out`  and `return to the home page`.
+3. After updating their data, users can `log out`  and `return to the home page`.
 	
-	4. Additionally users can `read the CV of a student searching by name`. Both `First Name` and `Last Name` text fields have to be filled in correctly.
+4. Additionally users can `read the CV of a student searching by name`. Both `First Name` and `Last Name` text fields have to be filled in correctly.
 	
-	5. Finally users can `read all CVs sorted alphabetically`. Only CVs with valid (not null) `First Name` and `Last Name` will be displayed.
+5. Finally users can `read all CVs sorted alphabetically`. Only CVs with valid (not null) `First Name` and `Last Name` will be displayed.
 
 
 
@@ -121,50 +117,46 @@ Design and implement a web site where the students from the university can uploa
 
 ## Pages description
 
-	1. `home.jsp` is the Home Page. It displays a Welcome message and allows users to navigate to `login.jsp`, `register.jsp` and `selection.jsp` pages.
+1. `home.jsp` is the Home Page. It displays a Welcome message and allows users to navigate to `login.jsp`, `register.jsp` and `selection.jsp` pages.
 	
-	2. `login.jsp` contains a form where users can insert their user name and password in order to log in.
+2. `login.jsp` contains a form where users can insert their user name and password in order to log in.
 	
-	3. `register.jsp` contains a form where users can insert a user name and a password in order to create a new account.
+3. `register.jsp` contains a form where users can insert a user name and a password in order to create a new account.
 	
-	4. `login_check.jsp` checks the user's input while trying to log in and displays the appropriate message and options depending on the input. If it's valid user can gain access to `edit.jsp`, otherwise he can try again, register a new account, or return to the home page.
+4. `login_check.jsp` checks the user's input while trying to log in and displays the appropriate message and options depending on the input. If it's valid user can gain access to `edit.jsp`, otherwise he can try again, register a new account, or return to the home page.
 	
-	5. `reg_check.jsp` checks the user's input while trying to register a new account. If the user name is already in use a message is displayed and allows the user to try again with a new user name, otherwise displays a message of success and allows the user to log in to his account.
+5. `reg_check.jsp` checks the user's input while trying to register a new account. If the user name is already in use a message is displayed and allows the user to try again with a new user name, otherwise displays a message of success and allows the user to log in to his account.
 	
-	6. `edit.jsp` displays the user's data (`First Name`, `Last Name`, `Institution`, `Faculty`, `Department`, `CV description`, `Birth Date`, `Interests`, `Languages` and `Hobbies`). They can be updated separately using text fields or drop down lists. `edit.jsp` calls `update.jsp` every time the user tries to update a field.
+6. `edit.jsp` displays the user's data (`First Name`, `Last Name`, `Institution`, `Faculty`, `Department`, `CV description`, `Birth Date`, `Interests`, `Languages` and `Hobbies`). They can be updated separately using text fields or drop down lists. `edit.jsp` calls `update.jsp` every time the user tries to update a field.
 	
-	7. `update.jsp` is being called from `edit.jsp` every time users try to update their data, and is only responsible for this puprose.
+7. `update.jsp` is being called from `edit.jsp` every time users try to update their data, and is only responsible for this puprose.
 	
-	8. `selection.jsp` displays the options users have in order to read CVs. Only two options are currently working. `Read the CV of a student searching by name` and `Read all CVs sorted alphabetically`. `selection.jsp` calls `result.jsp` to preview the results of the search.
+8. `selection.jsp` displays the options users have in order to read CVs. Only two options are currently working. `Read the CV of a student searching by name` and `Read all CVs sorted alphabetically`. `selection.jsp` calls `result.jsp` to preview the results of the search.
 	
-	9. `result.jsp` displays the result of the search based on the user's input in `selection.jsp`.
+9. `result.jsp` displays the result of the search based on the user's input in `selection.jsp`.
 
 
 ## Run instructions
 
 First of all you will need `MySQL Workbench` and `NetBeansIDE` installed. You can also use different tools and IDEs, but i will give the instructions based on those that i have used.
 
-	1. Launch `MySQL Workbench` and create a connection with a `Port`, `user name` and `password`.
+1. Launch `MySQL Workbench` and create a connection with a `Port`, `user name` and `password`.
 	
-	2. Open the connection. Open the `database.sql` file and run it in order to create the database.
+2. Open the connection. Open the `database.sql` file and run it in order to create the database.
 	
-	3. Make sure to `start` the server, if it's not already running. `Server` -> `Startup/Shutdown`.
+3. Make sure to `start` the server, if it's not already running. `Server` -> `Startup/Shutdown`.
 	
-	4. Now launch `NetBeansIDE`, and `open` the project. You will have to change the values of `studentsDatabase` String in the following files to make sure that it's contents will match your database's attributes. You can edit the line below and just copy and paste it in the files.
+4. Now launch `NetBeansIDE`, and `open` the project. You will have to change the values of `studentsDatabase` String in the following files to make sure that it's contents will match your database's attributes. You can edit the line below and just copy and paste it in the files.
 	
 	String studentsDatabase = "jdbc:mysql://localhost:YOUR_PORT/project?user=YOUR_USER_NAME&password=YOUR_PASSWORD";
 	
-		- result.jsp, line 27
-		- edit.jsp, line 19
-		- login_check.jsp, line 18
-		- reg_check.jsp, line 21
-		- selection.jsp, line 12
-		- update.jsp, line 18
+	- result.jsp, line 27
+	- edit.jsp, line 19
+	- login_check.jsp, line 18
+	- reg_check.jsp, line 21
+	- selection.jsp, line 12
+	- update.jsp, line 18
 	
-	5. You can `run` the project by right clicking on the project name on the left tab named `Projects` and then click `Run`.
-	
-<<<<<<< HEAD
-I would not recommend to change values directly from the database, and use the web pages instead.
-=======
-I would not recommend to change values directly from the database, and use the web pages instead.
->>>>>>> 0dd44aae8009bff1670d489fc4ef0f13c3367940
+5. You can `run` the project by right clicking on the project name on the left tab named `Projects` and then click `Run`.
+
+I would not recommend to change values directly from the database, but use the web pages instead.
